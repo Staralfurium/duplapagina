@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Dupla Página — impressão offset, packaging e acabamentos premium." />
+    <title>Dupla Página Lda. - Artes Gráficas</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Ajuste de identidade: vermelho substitui todos os apontamentos laranja. */
+      :root { --orange: #ed1c24; --acid: #79cfc0; }
+      .box-icon::before { background: #ef6b72; }
+      .pack-art { background: #a8232c; }
+      .pack-box::after { border-color: #b73740; }
+      .magazine::after { background: #d93b43; }
+      .map-grid { background: linear-gradient(33deg, transparent 46%, #c84148 47% 50%, transparent 51%), linear-gradient(117deg, transparent 48%, #9fac78 49% 53%, transparent 54%), repeating-linear-gradient(0deg, transparent 0 28px, rgba(44,83,79,.25) 29px 31px), repeating-linear-gradient(90deg, transparent 0 40px, rgba(44,83,79,.2) 41px 43px); }
+      .nav a { font-size: .88rem; }
+      .eyebrow { font-size: .78rem; }
+      .scroll-prompt { font-size: .8rem; }
+      .text-link { font-size: .94rem; }
+      .marquee { color: var(--cream); }
+      .marquee b { color: #bfe7df; }
+      .book-icon { box-shadow: -10px 7px #79cfc0; }
+      .shelf { background: #79cfc0; border-color: #c3ece5; }
+      .shelf::before, .shelf::after { background: #c3ece5; }
+      .press-machine i { background: #79cfc0; }
+      .about { background: #cbd8e6; }
+      .service-icon { width: 124px; height: 124px; object-fit: contain; right: 8%; }
+      .phone-note { font: 400 .54rem var(--mono); letter-spacing: .03em; opacity: .78; }
+      .map-placeholder iframe { width: 100%; height: 100%; border: 0; filter: saturate(.72) contrast(.96); }
+      .map-link { position: absolute; right: 12px; bottom: 12px; z-index: 2; padding: 8px 10px; background: var(--cream); color: var(--ink); font: 700 .57rem var(--mono); text-decoration: none; text-transform: uppercase; letter-spacing: .04em; }
+      .hero-product-image { width: 100%; height: 100%; display: block; object-fit: cover; box-shadow: 14px 19px 34px rgba(24,37,45,.19); }
+      .hero-art .hero-number, .hero-art .art-caption { z-index: 2; }
+      .hero-art .art-caption { background: var(--cream); padding: 7px 10px; }
+      .project-art .portfolio-photo { width: 100%; height: 100%; display: block; object-fit: cover; }
+      .work-extra { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 18px; }
+      .work-extra-item { overflow: hidden; }
+      .work-extra-item img { display: block; width: 100%; height: 255px; object-fit: cover; }
+      .about-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .about-image > p { z-index: 1; padding: 9px 11px; background: rgba(24,37,45,.8); }
+      .finish-showcase { grid-template-columns: repeat(4, 1fr); }
+      .finish-photo { padding: 0; }
+      .finish-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,16,20,.48), transparent 52%); pointer-events: none; }
+      .finish-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .finish-photo .finish-label { position: absolute; z-index: 1; top: 19px; left: 19px; color: var(--cream); }
+      .back-to-top { position: fixed; right: 24px; bottom: 24px; z-index: 20; width: 48px; height: 48px; display: grid; place-items: center; background: var(--ink); color: var(--cream); border: 1px solid rgba(244,240,232,.35); border-radius: 50%; text-decoration: none; font: 400 1.25rem var(--sans); box-shadow: 0 8px 20px rgba(24,37,45,.22); transition: transform .2s ease, background .2s ease; }
+      .back-to-top:hover { transform: translateY(-4px); background: var(--orange); }
+      .official-logo { display: block; line-height: 0; }
+      .official-logo img { display: block; width: 218px; height: auto; }
+      .footer-logo { display: block; line-height: 0; }
+      .footer-logo img { display: block; width: 205px; height: auto; }
+      @media (max-width: 760px) { .official-logo img { width: 185px; } }
+      @media (max-width: 760px) { .work-extra { grid-template-columns: 1fr; } .work-extra-item img { height: 235px; } }
+      @media (max-width: 760px) { .finish-showcase { grid-template-columns: 1fr 1fr; } .finish-card { height: 245px; } }
+      .contact { color: var(--cream); }
+      .contact .eyebrow, .contact .contact-top > p:last-child, .contact-form label,
+      .contact-form input, .contact-form textarea, .contact-form input::placeholder,
+      .contact-form textarea::placeholder, .details-grid a, .details-grid p { color: var(--cream); }
+      .contact-form input, .contact-form textarea { border-color: rgba(244,240,232,.7); }
+      .button-light { background: var(--cream); color: var(--ink); }
+      .map-placeholder { color: var(--ink); }
+    </style>
+  </head>
+  <body>
+    <div class="page-noise" aria-hidden="true"></div>
+    <header class="site-header" id="topo">
+      <a class="official-logo" href="#topo" aria-label="Dupla Página, início">
+        <img src="assets/dupla-pagina-logo.svg" alt="Dupla Página — Artes Gráficas" />
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#servicos">O que fazemos</a>
+        <a href="#trabalhos">Portefólio</a>
+        <a href="#sobre">A gráfica</a>
+        <a href="#contactos" class="nav-contact">Falar connosco <span>↗</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Artes gráficas · desde 2009</p>
+          <h1>Ideias que<br /><em>ficam no papel.</em></h1>
+          <p class="hero-text">Da primeira prova à última dobra, damos corpo a marcas que querem ser tocadas, vistas e lembradas.</p>
+          <a href="#contactos" class="button button-dark">Começar um projecto <span>↘</span></a>
+        </div>
+        <div class="hero-art reveal">
+          <div class="hero-number">01</div>
+          <img class="hero-product-image" src="assets/portfolio-premium-box.png" alt="Caixa premium com estampagem dourada" />
+          <p class="art-caption">Papel. tinta. precisão.</p>
+        </div>
+        <a href="#servicos" class="scroll-prompt"><span></span>Descobrir</a>
+      </section>
+
+      <section class="marquee" aria-label="Serviços principais">
+        <div class="marquee-inner">OFFSET <b>✳</b> PACKAGING <b>✳</b> ETIQUETAS <b>✳</b> ACABAMENTOS PREMIUM <b>✳</b> OFFSET <b>✳</b> PACKAGING <b>✳</b> ETIQUETAS <b>✳</b> ACABAMENTOS PREMIUM <b>✳</b></div>
+      </section>
+
+      <section class="intro section-pad" id="servicos">
+        <p class="eyebrow reveal">01 — O que fazemos</p>
+        <div class="intro-grid">
+          <h2 class="reveal">Impressão com<br /><em>presença.</em></h2>
+          <div class="intro-text reveal">
+            <p>Somos parceiros de quem leva a apresentação a sério. Combinamos impressão offset, materiais escolhidos ao pormenor e acabamentos que tornam cada peça especial.</p>
+            <a href="#contactos" class="text-link">Peça-nos uma proposta <span>→</span></a>
+          </div>
+        </div>
+        <div class="service-list">
+          <article class="service-card reveal"><span>01</span><h3>Packaging</h3><p>Caixas, bolsas, sleeves e soluções à medida que fazem a primeira impressão contar.</p><img class="service-icon" src="assets/packaging.svg" alt="Ícone de caixa de packaging" /></article>
+          <article class="service-card reveal"><span>02</span><h3>Editorial</h3><p>Catálogos, revistas, livros e brochuras pensados para uma leitura memorável.</p><img class="service-icon" src="assets/editorial.svg" alt="Ícone de publicação editorial" /></article>
+          <article class="service-card reveal"><span>03</span><h3>Marca no papel</h3><p>Cartões, estacionário, etiquetas e materiais de ponto de venda com identidade.</p><img class="service-icon" src="assets/marca-no-papel.svg" alt="Ícone de cartão de marca" /></article>
+          <article class="service-card reveal"><span>04</span><h3>Exposição</h3><p>Expositores de cartão, sacos e materiais que põem o seu produto em destaque.</p><img class="service-icon" src="assets/exposicao.svg" alt="Ícone de expositor" /></article>
+        </div>
+      </section>
+
+      <section class="finishes section-pad">
+        <div class="finishes-title reveal"><p class="eyebrow">02 — O toque final</p><h2>O detalhe muda <em>tudo.</em></h2></div>
+        <div class="finish-showcase">
+          <div class="finish-card finish-photo reveal"><img src="assets/finish-gold-foil.png" alt="Termo estampagem dourada em cartão premium" /><div class="finish-label"><span>01</span><b>Termo estampagem</b></div></div>
+          <div class="finish-card finish-photo reveal"><img src="assets/finish-soft-touch.png" alt="Plasticização matte soft touch em embalagem premium" /><div class="finish-label"><span>02</span><b>Matte / soft touch</b></div></div>
+          <div class="finish-card finish-photo reveal"><img src="assets/finish-spot-uv.png" alt="Verniz UV localizado em embalagem premium" /><div class="finish-label"><span>03</span><b>Verniz UV</b></div></div>
+          <div class="finish-card finish-photo reveal"><img src="assets/finish-high-emboss.png" alt="Alto relevo em cartões de papel premium" /><div class="finish-label"><span>04</span><b>Alto relevo</b></div></div>
+        </div>
+        <div class="finish-footer reveal"><p>Plasticização matte ou brilho, verniz UV localizado, relevo seco, corte especial e muito mais.</p><a href="#contactos" class="text-link">Explorar acabamentos <span>→</span></a></div>
+      </section>
+
+      <section class="work section-pad" id="trabalhos">
+        <div class="work-heading reveal"><p class="eyebrow">03 — Possibilidades</p><h2>Peças que<br /><em>pedem mãos.</em></h2><p>Uma selecção de formatos, materiais e aplicações que produzimos diariamente.</p></div>
+        <div class="work-grid">
+          <article class="work-item item-packaging reveal"><div class="project-art"><img class="portfolio-photo" src="assets/portfolio-premium-box.png" alt="Caixa premium com relevo e ouro" /></div><div class="work-meta"><span>Packaging</span><b>Caixas que abrem histórias</b></div></article>
+          <article class="work-item item-editorial reveal"><div class="project-art"><img class="portfolio-photo" src="assets/portfolio-editorial.png" alt="Revistas e livros de produção premium" /></div><div class="work-meta"><span>Editorial</span><b>Revistas para guardar</b></div></article>
+          <article class="work-item item-labels reveal"><div class="project-art"><img class="portfolio-photo" src="assets/portfolio-labels.png" alt="Etiquetas premium com verniz UV" /></div><div class="work-meta"><span>Rótulos</span><b>Identidade à garrafa</b></div></article>
+          <article class="work-item item-display reveal"><div class="project-art"><img class="portfolio-photo" src="assets/portfolio-display.png" alt="Expositor de cartão e saco impresso" /></div><div class="work-meta"><span>Ponto de venda</span><b>Expositores que param o olhar</b></div></article>
+        </div>
+        <div class="work-extra">
+          <article class="work-extra-item reveal"><img src="assets/portfolio-wine.png" alt="Garrafa de vinho com rótulo e caixa premium" /><div class="work-meta"><span>Vinho</span><b>Rótulos e caixas de colecção</b></div></article>
+          <article class="work-extra-item reveal"><img src="assets/portfolio-chocolate.png" alt="Tabletes de chocolate com relevo de cacau" /><div class="work-meta"><span>Alimentar</span><b>Tabletes com relevo e foil</b></div></article>
+        </div>
+      </section>
+
+      <section class="about section-pad" id="sobre">
+        <div class="about-image reveal"><img class="about-photo" src="assets/about-offset-press.png" alt="Máquina de impressão offset com folhas em produção" /><p>Uma boa impressão começa por uma boa conversa.</p></div>
+        <div class="about-copy reveal"><p class="eyebrow">04 — A gráfica</p><h2>Ofício, técnica<br /><em>e curiosidade.</em></h2><p>Na Dupla Página, acreditamos que o papel continua a ter um lugar especial. É material, duradouro e cria ligações. Por isso acompanhamos cada projecto de perto — do ficheiro à entrega.</p><p>Trabalhamos com marcas, agências, editoras e pessoas que valorizam uma produção bem feita.</p><div class="stats"><div><b>+17</b><span>anos de ofício</span></div><div><b>∞</b><span>possibilidades</span></div></div></div>
+      </section>
+
+      <section class="contact section-pad" id="contactos">
+        <div class="contact-top reveal"><p class="eyebrow">05 — Contactos</p><h2>Vamos fazer<br /><em>acontecer.</em></h2><p>Conte-nos a ideia. Respondemos com as perguntas certas e uma proposta à medida.</p></div>
+        <div class="contact-grid">
+          <form class="contact-form reveal" action="https://formsubmit.co/duplapagina@hotmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Novo contacto do website — Dupla Página" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://duplapagina.pt/obrigado.html" />
+            <label>Nome<input required name="nome" type="text" placeholder="Como se chama?" /></label>
+            <label>Email<input required name="email" type="email" placeholder="nome@empresa.pt" /></label>
+            <label>Projecto<textarea required name="mensagem" rows="4" placeholder="O que gostaria de produzir?"></textarea></label>
+            <button class="button button-light" type="submit">Enviar mensagem <span>↗</span></button>
+          </form>
+          <div class="contact-details reveal">
+            <div class="map-placeholder"><iframe title="Mapa da Dupla Página" src="https://www.google.com/maps?q=Rua%20do%20Parque%20Industrial%2C%20Lote%2036%2C%204755-539%20V%C3%A1rzea%2C%20Barcelos%2C%20Portugal&amp;output=embed" loading="lazy"></iframe><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20do%20Parque%20Industrial%2C%20Lote%2036%2C%204755-539%20V%C3%A1rzea%2C%20Barcelos%2C%20Portugal" target="_blank" rel="noopener">Abrir mapa ↗</a></div>
+            <div class="details-grid"><div><span>Email</span><a href="mailto:duplapagina@hotmail.com">duplapagina@hotmail.com</a></div><div><span>Telefone</span><a href="tel:+351253812104">+351 253 812 104</a><small class="phone-note">Chamada para rede fixa nacional</small></div><div><span>Morada</span><p>Rua do Parque Industrial, Lote 36<br />4755-539 Várzea, Barcelos — Portugal</p></div><div><span>Redes</span><a href="https://instagram.com/duplapagina" target="_blank" rel="noopener" aria-label="Instagram da Dupla Página">Instagram ↗</a><a href="https://facebook.com/duplapagina" target="_blank" rel="noopener" aria-label="Facebook da Dupla Página">Facebook ↗</a></div></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <a class="back-to-top" href="#topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a>
+    <footer><a class="footer-logo" href="#topo" aria-label="Dupla Página, início"><img src="assets/dupla-pagina-logo-footer.svg" alt="Dupla Página — Artes Gráficas" /></a><p>A Arte de transformar</p><span>© <span id="year"></span> Dupla Página Lda.</span></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
