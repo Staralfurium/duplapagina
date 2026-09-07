@@ -1,5 +1,9 @@
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
+const header = document.querySelector('.site-header');
+const updateHeader = () => header?.classList.toggle('is-scrolled', window.scrollY > 12);
+updateHeader();
+window.addEventListener('scroll', updateHeader, { passive: true });
 menuButton?.addEventListener('click', () => {
   const isOpen = nav.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', String(isOpen));
