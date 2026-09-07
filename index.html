@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="6ad08e51-8793-4ea6-9a2f-28024bf5d9da"></script>
     <style>
       /* Ajuste de identidade: vermelho substitui todos os apontamentos laranja. */
       :root { --orange: #ed1c24; --acid: #79cfc0; }
@@ -51,6 +52,9 @@
       .finish-options label { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--cream); font: 500 .72rem var(--sans); letter-spacing: 0; text-transform: none; cursor: pointer; }
       .finish-options input { width: 14px; height: 14px; margin: 0; accent-color: var(--cream); }
       .form-note { display: block; margin-top: -9px; color: rgba(244,240,232,.78); font: 400 .56rem var(--mono); line-height: 1.5; }
+      .privacy-check { display: flex; align-items: flex-start; gap: 9px; margin: 20px 0 0; color: var(--cream); font: 500 .68rem var(--sans); line-height: 1.45; letter-spacing: 0; text-transform: none; cursor: pointer; }
+      .privacy-check input { flex: 0 0 auto; width: 15px; height: 15px; margin: 2px 0 0; accent-color: var(--cream); }
+      .privacy-check a, .form-note a { color: var(--cream); text-decoration-thickness: 1px; text-underline-offset: 3px; }
       .finish-showcase { grid-template-columns: repeat(4, 1fr); }
       .finish-photo { padding: 0; }
       .finish-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,16,20,.48), transparent 52%); pointer-events: none; }
@@ -171,7 +175,8 @@
             <div class="form-row"><label>Formato / medidas<input name="formato" type="text" placeholder="Ex.: A4, 210 × 297 mm" /></label><label>Material / papel<input name="material" type="text" placeholder="Se já tiver preferência" /></label></div>
             <fieldset><legend>Acabamentos pretendidos</legend><div class="finish-options"><label><input name="acabamentos[]" type="checkbox" value="Termo estampagem" />Termo estampagem</label><label><input name="acabamentos[]" type="checkbox" value="Verniz UV" />Verniz UV</label><label><input name="acabamentos[]" type="checkbox" value="Matte / soft touch" />Matte / soft touch</label><label><input name="acabamentos[]" type="checkbox" value="Alto relevo" />Alto relevo</label><label><input name="acabamentos[]" type="checkbox" value="Corte especial" />Corte especial</label><label><input name="acabamentos[]" type="checkbox" value="Preciso de aconselhamento" />Preciso de aconselhamento</label></div></fieldset>
             <div class="form-row"><label>Prazo pretendido<input name="prazo" type="text" placeholder="Ex.: até 30 de Outubro" /></label><label>Link para ficheiros<input name="link_ficheiros" type="url" placeholder="WeTransfer, Drive, Dropbox…" /></label></div>
-            <label>Descrição do projecto<textarea required name="mensagem" rows="5" placeholder="Conte-nos o que tem em mente: utilização, referências e qualquer detalhe importante."></textarea></label><small class="form-note">Se tiver arte-final ou referências, inclua acima um link de WeTransfer, Google Drive ou Dropbox.</small>
+            <label>Descrição do projecto<textarea required name="mensagem" rows="5" placeholder="Conte-nos o que tem em mente: utilização, referências e qualquer detalhe importante."></textarea></label><small class="form-note">Se tiver arte-final ou referências, inclua acima um link de WeTransfer, Google Drive ou Dropbox. Os seus dados serão usados apenas para analisar e responder a este pedido de orçamento.</small>
+            <label class="privacy-check"><input required name="confirmacao_privacidade" type="checkbox" value="Li e compreendi a Política de Privacidade" /><span>Li e compreendi a <a href="politica-de-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>.</span></label>
             <button class="button button-light" type="submit">Pedir orçamento <span>↗</span></button>
           </form>
           <div class="contact-details reveal">
@@ -182,7 +187,7 @@
       </section>
     </main>
     <a class="back-to-top" href="#topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a>
-    <footer><a class="footer-logo" href="#topo" aria-label="Dupla Página, início"><img src="assets/dupla-pagina-logo-footer.svg" alt="Dupla Página — Artes Gráficas" /></a><p>A Arte de transformar</p><span>© <span id="year"></span> Dupla Página Lda.</span></footer>
+    <footer><a class="footer-logo" href="#topo" aria-label="Dupla Página, início"><img src="assets/dupla-pagina-logo-footer.svg" alt="Dupla Página — Artes Gráficas" /></a><p>A Arte de transformar</p><span>© <span id="year"></span> Dupla Página Lda. · <a href="politica-de-privacidade.html">Política de Privacidade</a></span></footer>
     <script src="script.js"></script>
   </body>
 </html>
