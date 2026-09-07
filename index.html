@@ -42,6 +42,15 @@
       .work-extra-item img { display: block; width: 100%; height: 255px; object-fit: cover; }
       .about-photo { display: block; width: 100%; height: 100%; object-fit: cover; }
       .about-image > p { z-index: 1; padding: 9px 11px; background: rgba(24,37,45,.8); }
+      .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+      .contact-form select { display: block; width: 100%; padding: 10px 0 12px; border: 0; border-bottom: 1px solid rgba(244,240,232,.7); border-radius: 0; background: transparent; color: var(--cream); font: 500 1rem var(--sans); outline: 0; }
+      .contact-form select option { color: var(--ink); }
+      .contact-form fieldset { margin: 7px 0 1.55rem; padding: 14px 0 0; border: 0; border-top: 1px solid rgba(244,240,232,.7); }
+      .contact-form legend { padding: 0; font: 500 .6rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+      .finish-options { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 14px; margin-top: 12px; }
+      .finish-options label { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--cream); font: 500 .72rem var(--sans); letter-spacing: 0; text-transform: none; cursor: pointer; }
+      .finish-options input { width: 14px; height: 14px; margin: 0; accent-color: var(--cream); }
+      .form-note { display: block; margin-top: -9px; color: rgba(244,240,232,.78); font: 400 .56rem var(--mono); line-height: 1.5; }
       .finish-showcase { grid-template-columns: repeat(4, 1fr); }
       .finish-photo { padding: 0; }
       .finish-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,16,20,.48), transparent 52%); pointer-events: none; }
@@ -56,6 +65,7 @@
       @media (max-width: 760px) { .official-logo img { width: 185px; } }
       @media (max-width: 760px) { .work-extra { grid-template-columns: 1fr; } .work-extra-item img { height: 235px; } }
       @media (max-width: 760px) { .finish-showcase { grid-template-columns: 1fr 1fr; } .finish-card { height: 245px; } }
+      @media (max-width: 760px) { .form-row, .finish-options { grid-template-columns: 1fr; gap: 0; } }
       .contact { color: var(--cream); }
       .contact .eyebrow, .contact .contact-top > p:last-child, .contact-form label,
       .contact-form input, .contact-form textarea, .contact-form input::placeholder,
@@ -155,10 +165,14 @@
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://www.duplapagina.pt/obrigado.html" />
-            <label>Nome<input required name="nome" type="text" placeholder="Como se chama?" /></label>
-            <label>Email<input required name="email" type="email" placeholder="nome@empresa.pt" /></label>
-            <label>Projecto<textarea required name="mensagem" rows="4" placeholder="O que gostaria de produzir?"></textarea></label>
-            <button class="button button-light" type="submit">Enviar mensagem <span>↗</span></button>
+            <div class="form-row"><label>Nome<input required name="nome" type="text" placeholder="Como se chama?" /></label><label>Empresa<input name="empresa" type="text" placeholder="Nome da empresa" /></label></div>
+            <div class="form-row"><label>Email<input required name="email" type="email" placeholder="nome@empresa.pt" /></label><label>Telefone<input name="telefone" type="tel" placeholder="O seu contacto" /></label></div>
+            <div class="form-row"><label>Produto<select required name="tipo_de_produto"><option value="" selected disabled>Seleccione uma opção</option><option>Packaging / caixas</option><option>Rótulos e etiquetas</option><option>Revistas, livros ou catálogos</option><option>Cartões e estacionário</option><option>Expositores e ponto de venda</option><option>Sacos e outros</option></select></label><label>Quantidade<input name="quantidade" type="text" placeholder="Ex.: 1 000 unidades" /></label></div>
+            <div class="form-row"><label>Formato / medidas<input name="formato" type="text" placeholder="Ex.: A4, 210 × 297 mm" /></label><label>Material / papel<input name="material" type="text" placeholder="Se já tiver preferência" /></label></div>
+            <fieldset><legend>Acabamentos pretendidos</legend><div class="finish-options"><label><input name="acabamentos[]" type="checkbox" value="Termo estampagem" />Termo estampagem</label><label><input name="acabamentos[]" type="checkbox" value="Verniz UV" />Verniz UV</label><label><input name="acabamentos[]" type="checkbox" value="Matte / soft touch" />Matte / soft touch</label><label><input name="acabamentos[]" type="checkbox" value="Alto relevo" />Alto relevo</label><label><input name="acabamentos[]" type="checkbox" value="Corte especial" />Corte especial</label><label><input name="acabamentos[]" type="checkbox" value="Preciso de aconselhamento" />Preciso de aconselhamento</label></div></fieldset>
+            <div class="form-row"><label>Prazo pretendido<input name="prazo" type="text" placeholder="Ex.: até 30 de Outubro" /></label><label>Link para ficheiros<input name="link_ficheiros" type="url" placeholder="WeTransfer, Drive, Dropbox…" /></label></div>
+            <label>Descrição do projecto<textarea required name="mensagem" rows="5" placeholder="Conte-nos o que tem em mente: utilização, referências e qualquer detalhe importante."></textarea></label><small class="form-note">Se tiver arte-final ou referências, inclua acima um link de WeTransfer, Google Drive ou Dropbox.</small>
+            <button class="button button-light" type="submit">Pedir orçamento <span>↗</span></button>
           </form>
           <div class="contact-details reveal">
             <div class="map-placeholder"><iframe title="Mapa da Dupla Página" src="https://www.google.com/maps?q=Rua%20do%20Parque%20Industrial%2C%20Lote%2036%2C%204755-539%20V%C3%A1rzea%2C%20Barcelos%2C%20Portugal&amp;output=embed" loading="lazy"></iframe><a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Rua%20do%20Parque%20Industrial%2C%20Lote%2036%2C%204755-539%20V%C3%A1rzea%2C%20Barcelos%2C%20Portugal" target="_blank" rel="noopener">Abrir mapa ↗</a></div>
