@@ -14,6 +14,9 @@
     <style>
       /* Ajuste de identidade: vermelho substitui todos os apontamentos laranja. */
       :root { --orange: #ed1c24; --acid: #79cfc0; }
+      html { scroll-padding-top: 105px; }
+      .site-header { position: sticky; top: 0; z-index: 30; transition: background .25s ease, box-shadow .25s ease, backdrop-filter .25s ease; }
+      .site-header.is-scrolled { background: rgba(244,240,232,.92); box-shadow: 0 7px 22px rgba(24,37,45,.1); backdrop-filter: blur(12px); }
       .box-icon::before { background: #ef6b72; }
       .pack-art { background: #a8232c; }
       .pack-box::after { border-color: #b73740; }
@@ -66,7 +69,7 @@
       .official-logo img { display: block; width: 218px; height: auto; }
       .footer-logo { display: block; line-height: 0; }
       .footer-logo img { display: block; width: 205px; height: auto; }
-      @media (max-width: 760px) { .official-logo img { width: 185px; } }
+      @media (max-width: 760px) { html { scroll-padding-top: 84px; } .official-logo img { width: 185px; } }
       @media (max-width: 760px) { .work-extra { grid-template-columns: 1fr; } .work-extra-item img { height: 235px; } }
       @media (max-width: 760px) { .finish-showcase { grid-template-columns: 1fr 1fr; } .finish-card { height: 245px; } }
       @media (max-width: 760px) { .form-row, .finish-options { grid-template-columns: 1fr; gap: 0; } }
