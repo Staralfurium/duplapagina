@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="alternate" hreflang="pt-PT" href="https://www.duplapagina.pt/" />
+    <link rel="alternate" hreflang="en" href="https://www.duplapagina.pt/en/" />
     <script defer src="https://cloud.umami.is/script.js" data-website-id="6ad08e51-8793-4ea6-9a2f-28024bf5d9da"></script>
     <style>
       /* Ajuste de identidade: vermelho substitui todos os apontamentos laranja. */
@@ -23,6 +25,8 @@
       .magazine::after { background: #d93b43; }
       .map-grid { background: linear-gradient(33deg, transparent 46%, #c84148 47% 50%, transparent 51%), linear-gradient(117deg, transparent 48%, #9fac78 49% 53%, transparent 54%), repeating-linear-gradient(0deg, transparent 0 28px, rgba(44,83,79,.25) 29px 31px), repeating-linear-gradient(90deg, transparent 0 40px, rgba(44,83,79,.2) 41px 43px); }
       .nav a { font-size: .88rem; }
+      .nav .language-switch { padding: 9px 12px; border: 1px solid var(--ink); border-radius: 999px; font: 700 .67rem var(--mono); letter-spacing: .08em; transition: background .2s ease, color .2s ease, transform .2s ease; }
+      .nav .language-switch:hover { background: var(--orange); color: var(--cream); border-color: var(--orange); transform: translateY(-2px); }
       .eyebrow { font-size: .78rem; }
       .scroll-prompt { font-size: .8rem; }
       .text-link { font-size: .94rem; }
@@ -94,6 +98,7 @@
         <a href="#trabalhos">PORTFÓLIO</a>
         <a href="#sobre">SOBRE NÓS</a>
         <a href="#contactos" class="nav-contact">Falar connosco <span>↗</span></a>
+        <a href="en/index.html" class="language-switch" lang="en" hreflang="en" aria-label="View website in English">EN</a>
       </nav>
     </header>
 
