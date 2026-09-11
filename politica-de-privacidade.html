@@ -32,10 +32,13 @@
       .notice p { margin: 0; font-size: .83rem; }
       footer { padding: 28px clamp(22px, 5vw, 74px); background: var(--ink); color: var(--cream); font: 400 .68rem var(--mono); }
       footer a { color: var(--cream); }
+      .policy-actions { position: fixed; right: 22px; bottom: 22px; z-index: 5; display: flex; align-items: center; gap: 8px; }
+      .policy-actions a { display: grid; place-items: center; height: 44px; padding: 0 14px; background: var(--ink); color: var(--cream); border: 1px solid rgba(244,240,232,.35); text-decoration: none; font: 500 .64rem var(--mono); letter-spacing: .04em; box-shadow: 0 8px 20px rgba(24,37,45,.18); }
+      .policy-actions a:first-child { width: 44px; padding: 0; font: 400 1.2rem var(--sans); }.policy-actions a:hover { background: var(--red); }
       @media (max-width: 560px) { .topbar { align-items: flex-start; flex-direction: column; gap: 16px; } }
     </style>
   </head>
-  <body>
+  <body id="top">
     <header class="topbar"><a href="index.html" aria-label="Voltar ao site da Dupla Página"><img src="assets/dupla-pagina-logo.svg" alt="Dupla Página — Artes Gráficas" /></a><a href="index.html#contactos">Voltar ao site ↗</a></header>
     <main>
       <p class="eyebrow">Dupla Página Lda.</p>
@@ -80,6 +83,7 @@
       <section>
         <h2>7. Cookies, estatísticas e serviços de terceiros</h2>
         <p>Usamos o Umami para obter estatísticas agregadas de utilização do website, como páginas visitadas, origem da visita, dispositivo e navegador. Esta informação ajuda-nos a melhorar o website e não é utilizada para criar perfis publicitários.</p>
+        <p>Se aceitar as preferências apresentadas no website, guardamos localmente no seu navegador a escolha e a indicação de que viu o aviso de sustentabilidade, para evitar voltar a mostrá-lo durante 30 dias. Se escolher continuar sem guardar, essa indicação não é conservada após a página ser fechada ou atualizada.</p>
         <p>O website também carrega serviços de terceiros, como o Google Maps para apresentar a localização e o Google Fonts para tipografia. Estes serviços podem processar dados técnicos, como o endereço IP, de acordo com as respetivas políticas.</p>
       </section>
 
@@ -90,6 +94,7 @@
 
       <div class="notice"><p>Última atualização: 7 de setembro de 2026.</p></div>
     </main>
+    <div class="policy-actions"><a href="#top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a><a href="index.html">Voltar ao website ↗</a></div>
     <footer>© 2026 Dupla Página Lda. · <a href="index.html">duplapagina.pt</a></footer>
   </body>
 </html>

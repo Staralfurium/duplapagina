@@ -87,6 +87,17 @@
       .ppwr-note b { color: var(--cream); font-size: .95rem; letter-spacing: -.02em; }.ppwr-note span { color: var(--cream); font: 500 .62rem var(--mono); text-transform: uppercase; letter-spacing: .07em; }
       .back-to-top { position: fixed; right: 24px; bottom: 24px; z-index: 20; width: 48px; height: 48px; display: grid; place-items: center; background: var(--ink); color: var(--cream); border: 1px solid rgba(244,240,232,.35); border-radius: 50%; text-decoration: none; font: 400 1.25rem var(--sans); box-shadow: 0 8px 20px rgba(24,37,45,.22); transition: transform .2s ease, background .2s ease; }
       .back-to-top:hover { transform: translateY(-4px); background: var(--orange); }
+      .sustainability-popup[hidden], .cookie-banner[hidden] { display: none; }
+      .sustainability-popup { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 22px; background: rgba(24,37,45,.42); }
+      .popup-panel { position: relative; width: min(560px, 100%); padding: clamp(30px, 5vw, 52px); overflow: hidden; background: var(--cream); color: var(--ink); box-shadow: 0 28px 70px rgba(0,0,0,.28); }
+      .popup-panel::before { content: ''; position: absolute; top: 0; right: 0; width: 32%; height: 9px; background: var(--orange); }
+      .popup-close { position: absolute; top: 17px; right: 18px; width: 32px; height: 32px; border: 0; background: transparent; color: var(--ink); font: 400 1.65rem var(--sans); line-height: 1; cursor: pointer; }
+      .popup-kicker { margin: 0 0 18px; color: var(--orange); font: 500 .68rem var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+      .popup-panel h2 { max-width: 430px; margin: 0 0 18px; font-size: clamp(2.25rem, 5.4vw, 4rem); line-height: .91; letter-spacing: -.065em; }
+      .popup-panel h2 em { font-family: var(--serif); font-weight: 500; }.popup-panel > p:not(.popup-kicker) { max-width: 450px; margin: 0; font-size: .95rem; line-height: 1.7; }
+      .popup-actions { display: flex; align-items: center; gap: 22px; margin-top: 30px; }.popup-actions .button { padding: 15px 18px; }.popup-dismiss { padding: 0; border: 0; background: transparent; color: var(--ink); font: 500 .72rem var(--sans); text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+      .cookie-banner { position: fixed; right: 20px; bottom: 20px; z-index: 70; width: min(480px, calc(100% - 40px)); padding: 22px; background: var(--ink); color: var(--cream); box-shadow: 0 16px 42px rgba(0,0,0,.25); }
+      .cookie-banner p { margin: 0; font-size: .76rem; line-height: 1.6; }.cookie-banner a { color: var(--cream); text-underline-offset: 3px; }.cookie-actions { display: flex; gap: 10px; margin-top: 17px; }.cookie-actions button { padding: 10px 13px; border: 1px solid var(--cream); background: transparent; color: var(--cream); font: 700 .64rem var(--sans); cursor: pointer; }.cookie-actions .cookie-accept { background: var(--cream); color: var(--ink); }
       .official-logo { display: block; line-height: 0; }
       .official-logo img { display: block; width: 218px; height: auto; }
       .footer-logo { display: block; line-height: 0; }
@@ -95,6 +106,7 @@
       @media (max-width: 760px) { .work-extra { grid-template-columns: 1fr; } .work-extra-item img { height: 235px; } }
       @media (max-width: 760px) { .finish-showcase { grid-template-columns: 1fr 1fr; } .finish-card { height: 245px; } }
       @media (max-width: 760px) { .sustainability-heading, .sustainability-grid { grid-template-columns: 1fr; gap: 18px; } .sustainability-grid { margin-top: 3rem; } .sustainability-card { min-height: 230px; } .ppwr-note { display: block; } .ppwr-note span { display: block; margin-top: 8px; } }
+      @media (max-width: 560px) { .popup-actions { align-items: flex-start; flex-direction: column; gap: 16px; } .cookie-banner { right: 12px; bottom: 12px; width: calc(100% - 24px); } }
       @media (max-width: 760px) { .form-row, .finish-options { grid-template-columns: 1fr; gap: 0; } }
       .contact { color: var(--cream); }
       .contact .eyebrow, .contact .contact-top > p:last-child, .contact-form label,
@@ -223,6 +235,10 @@
         </div>
       </section>
     </main>
+    <section class="sustainability-popup" id="sustainability-popup" aria-labelledby="popup-title" aria-modal="true" role="dialog" hidden>
+      <div class="popup-panel"><button class="popup-close" type="button" aria-label="Fechar">×</button><p class="popup-kicker">Packaging responsável · FSC<sup>®</sup></p><h2 id="popup-title">Embalagens pensadas<br /><em>para o próximo capítulo.</em></h2><p>A PPWR está a mudar a forma como as embalagens são pensadas. Desenvolvemos soluções sustentáveis, com certificação FSC<sup>®</sup>, orientadas para a reciclabilidade e para a conformidade do seu projecto.</p><div class="popup-actions"><a class="button button-dark popup-action" href="#contactos">Pedir orçamento sustentável <span>↗</span></a><button class="popup-dismiss" type="button">Agora não</button></div></div>
+    </section>
+    <aside class="cookie-banner" id="cookie-banner" aria-label="Preferências de cookies" hidden><p>Usamos uma preferência no navegador para não voltar a mostrar este aviso durante 30 dias. Pode aceitar ou continuar sem guardar essa preferência. Consulte a <a href="politica-de-privacidade.html">Política de Privacidade</a>.</p><div class="cookie-actions"><button class="cookie-accept" type="button">Aceitar preferências</button><button class="cookie-reject" type="button">Continuar sem guardar</button></div></aside>
     <a class="back-to-top" href="#topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a>
     <footer><a class="footer-logo" href="#topo" aria-label="Dupla Página, início"><img src="assets/dupla-pagina-logo-footer.svg" alt="Dupla Página — Artes Gráficas" /></a><p>A Arte de transformar</p><span>© <span id="year"></span> Dupla Página Lda. · <a href="politica-de-privacidade.html">Política de Privacidade</a></span></footer>
     <script src="script.js"></script>
